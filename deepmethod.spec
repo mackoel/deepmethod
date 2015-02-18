@@ -7,7 +7,7 @@ Summary:	Differential Evolution Entirely Parallel method
 Group:		Science
 License:	GPLv3
 URL:		http://sourceforge.net/projects/deepmethod/
-Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar.gz/download
+Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar.gz
 #Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar.gz
 #BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
