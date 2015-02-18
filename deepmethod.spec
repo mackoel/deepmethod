@@ -15,6 +15,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 Requires:	glib2
 
 BuildRequires:	glib2-devel
+BuildRequires:	intltool
 
 %description
 Differential Evolution Entirely Parallel method
