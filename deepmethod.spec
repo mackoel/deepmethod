@@ -1,6 +1,7 @@
 Name:		deepmethod
 Version:	1.0.0
-Release:	0%{?dist}
+#Release:	0%{?dist}
+Release:	0
 Summary:	Differential Evolution Entirely Parallel method
 
 Group:		Science
