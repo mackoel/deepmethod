@@ -6,8 +6,8 @@ Summary:	Differential Evolution Entirely Parallel method
 Group:		Science
 License:	GPLv3
 URL:		http://sourceforge.net/projects/deepmethod/
-#Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar.gz/download
-Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar.gz
+Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar.gz/download
+#Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 Requires:	glib2
@@ -54,13 +54,12 @@ make %{?_smp_mflags} CFLAGS="%{optflags}"
 rm -rf %{buildroot}
 %make_install
 
-#%find_lang %{name}
+%find_lang %{name}
 
 %clean
 rm -rf %{buildroot}
 
-#%files -f %{name}.lang
-%files
+%files -f %{name}.lang
 %defattr(-,root,root,-)
 %doc %{_docdir}
 %{_bindir}/deepmethod
@@ -68,6 +67,8 @@ rm -rf %{buildroot}
 %{_libdir}/libdeep.so.*
 %{_libdir}/libxmod.so
 %{_libdir}/libxmod.so.*
+%{_mandir}/man1/*
+%{_mandir}/man5/*
 
 %files openmpi
 %defattr(-,root,root,-)
@@ -93,6 +94,6 @@ rm -rf %{buildroot}
 %{_libdir}/pkgconfig/libdeep_openmpi-1.0.pc
 
 %changelog
-* Mon Feb 16 2015 Kozlov Konstantin <mackoel@gmail.com> - 0.2.0-3
+* Mon Feb 16 2015 Kozlov Konstantin <mackoel@gmail.com> - 1.0.0-0
 - First release
 
