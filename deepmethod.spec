@@ -1,14 +1,12 @@
 Name:		deepmethod
 Version:	1.0.0
-#Release:	0%{?dist}
-Release:	0
+Release:	0%{?dist}
 Summary:	Differential Evolution Entirely Parallel method
 
 Group:		Science
 License:	GPLv3
 URL:		http://sourceforge.net/projects/deepmethod/
 Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar.gz
-#Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar.gz
 #BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
@@ -45,12 +43,11 @@ Requires:       %{name} = %{version}-%{release}
 %description openmpi-devel
 Development files for DEEP with OpenMPI.
 
-
 %prep
 %setup -q
 
 %build
-%configure --enable-mpi-build-target
+%configure --enable-mpi-build-target --with-mpi="%{_libdir}/openmpi"
 make %{?_smp_mflags} CFLAGS="%{optflags}"
 
 %install
