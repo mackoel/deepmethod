@@ -1,5 +1,5 @@
 Name:		deepmethod
-Version:	1.1.0
+Version:	1.2.0
 Release:	0%{?dist}
 Summary:	Differential Evolution Entirely Parallel method
 
@@ -94,6 +94,9 @@ rm -rf %{buildroot}
 %{_libdir}/pkgconfig/libdeep_openmpi-1.0.pc
 
 %changelog
+* Wed Jun 24 2015 Kozlov Konstantin <mackoel@gmail.com> - 1.2.0-0
+- Third release
+
 * Mon Jun 01 2015 Kozlov Konstantin <mackoel@gmail.com> - 1.1.0-0
 - Second release
 
