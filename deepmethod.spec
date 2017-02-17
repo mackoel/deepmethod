@@ -23,6 +23,7 @@ Summary:        DEEP openmpi
 Group:          Science
 Requires:	openmpi
 BuildRequires:	openmpi-devel
+BuildRequires:	environment-modules
 
 %description openmpi
 Differential Evolution Entirely Parallel method with openmpi
@@ -96,6 +97,9 @@ rm -rf %{buildroot}
 %changelog
 * Tue Feb 17 2017 Kozlov Konstantin <mackoel@gmail.com> - 2.1.0-0
 - Next version
+
+* Sat Jul 23 2016 Kozlov Konstantin <mackoel@gmail.com> - 2.0.2-1
+- Added environment-modules for F24
 
 * Tue Jul 06 2016 Kozlov Konstantin <mackoel@gmail.com> - 2.0.2-0
 - Next version
