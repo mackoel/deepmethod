@@ -11,8 +11,6 @@ Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 Requires:	glib2
-BuildRequires:	infinipath-psm
-#BuildRequires:	libpsm2-compat
 BuildRequires:	glib2-devel
 BuildRequires:	intltool
 
@@ -23,6 +21,9 @@ Differential Evolution Entirely Parallel method
 Summary:        DEEP openmpi
 Group:          Science
 Requires:	openmpi
+BuildRequires:	python-libs
+BuildRequires:	infinipath-psm
+#BuildRequires:	libpsm2-compat
 BuildRequires:	openmpi-devel
 BuildRequires:	environment-modules
 
