@@ -1,5 +1,5 @@
 Name:		deepmethod
-Version:	2.1.0
+Version:	2.2.0
 Release:	0%{?dist}
 Summary:	Differential Evolution Entirely Parallel method
 
@@ -11,7 +11,8 @@ Source0:	http://sourceforge.net/projects/deepmethod/files/%{name}-%{version}.tar
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 Requires:	glib2
-
+BuildRequires:	infinipath-psm
+#BuildRequires:	libpsm2-compat
 BuildRequires:	glib2-devel
 BuildRequires:	intltool
 
@@ -95,6 +96,9 @@ rm -rf %{buildroot}
 %{_libdir}/pkgconfig/libdeep_openmpi-1.0.pc
 
 %changelog
+* Tue Jul 26 2017 Kozlov Konstantin <mackoel@gmail.com> - 2.2.0-0
+- Next version and fix for infinipath
+
 * Tue Feb 17 2017 Kozlov Konstantin <mackoel@gmail.com> - 2.1.0-0
 - Next version
 
